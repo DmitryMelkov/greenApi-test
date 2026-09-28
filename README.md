@@ -22,11 +22,15 @@ npm install
 npm run dev
 ```
 
-Сборка: `npm run build`  
-Превью: `npm run preview`  
-Линт: `npm run lint`  
-Формат: `npm run format`  
-Тесты: `npm test`
+Откройте адрес из терминала (обычно `http://localhost:5173`).
+
+| Команда           | Назначение                  |
+| ----------------- | --------------------------- |
+| `npm run build`   | production-сборка в `dist/` |
+| `npm run preview` | локальный просмотр сборки   |
+| `npm run lint`    | oxlint                      |
+| `npm run format`  | Prettier                    |
+| `npm test`        | Vitest                      |
 
 ## Настройка GREEN-API
 
@@ -53,15 +57,3 @@ src/
   ui/                   # Button, Input, Avatar, Modal, Toast
   lib/                  # localStorage credentials и чатов
 ```
-
-## Деплой
-
-SPA: после `npm run build` каталог `dist/`.
-
-`vercel.json` — rewrite всех путей на `index.html`, чтобы React Router работал при обновлении страницы на Vercel.
-
-```bash
-npx vercel
-```
-
-Или подключите репозиторий [DmitryMelkov/greenApi-test](https://github.com/DmitryMelkov/greenApi-test) к Vercel / Netlify / Cloudflare Pages.
